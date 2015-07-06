@@ -1,0 +1,53 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  background: rgba(171, 170, 155, 0.5);
+  font-family: verdana;
+  font-size: 12px;
+}
+
+h1 {
+  font-family: 'Iceland', cursive;
+  font-size: 30px;
+  text-align: center;
+  background: #aaece2;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+table{
+  border-collapse: collapse;
+}
+.line td{
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+input, button {
+  padding: 10px;
+  background: #afe023;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+a {
+  color: #13aa53;
+}
+
+a:hover {
+  color: #146ea1;
+}
+
+input:hover, button:hover {
+  background: #638208;
+}

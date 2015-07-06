@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/public/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+  <title>New Movie</title>
+</head>
+<body>
+
+  <form action="/movies" method="GET">
+    <input type="submit" value="All Movies">
+  </form>
+
+<h2>Add a Movie</h2>
+      <form action="/movies" method="POST">
+        <table class = "new">
+          <tr>
+            <th>
+              <label for="title">Title</label>
+            </th>
+            <td>
+              <input type="text" name="title" id="title" size="50">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label for="director">Director</label>
+            </th>
+            <td>
+              <input type="text" name="director" id="director" size="50">
+            </td>
+          </tr><tr>
+            <th>
+              <label for="year">Year</label>
+            </th>
+            <td>
+              <input type="text" name="year" id="year" size="5">
+            </td>
+          </tr><tr>
+            <th>
+              <label for="rating">
+                My Rating
+              <td>
+                </label>
+                <label for="one">
+                  <input type="radio" id="one" name="rating" value="1"> 1
+                </label>
+                <label for="two">
+                  <input type="radio" id="two" name="rating" value="2"> 2
+                </label>
+                <label for="three">
+                  <input type="radio" id="three" name="rating" checked="checked" value="3"> 3
+                </label>
+                <label for="four">
+                  <input type="radio" id="four" name="rating" value="4"> 4
+                </label>
+                <label for="five">
+                  <input type="radio" id="five" name="rating" value="5"> 5
+                </label>
+              </td>
+            </th>
+          </tr><tr>
+            <th>
+              <label for="poster">Poster URL</label>
+            </th>
+            <td>
+              <input type="text" name="poster" id="poster" size="50">
+            </td>
+          </tr><tr>
+          </table>
+        <input type="submit" value="Add Movie" class="button">
+      </form>
+</body>
+</html>

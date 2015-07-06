@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List of Movie Reviews</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <form action="/movies/new" method="GET">
+    <input type="submit" class="new-movie" value="Add a new movie review">
+  </form>
+
+  <h1>{{pageTitle}}</h1>
+  <h2>All Movies</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Year</th>
+            <th>My rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#movies}}
+          <tr class="line">
+            <td><b><a href="/movies/{{_id}}">{{title}}</a></b></td>
+            <td>{{director}}</td>
+            <td>{{year}}</td>
+            <td>{{rating}}</td>
+            <td>
+              <form action="/movies/{{_id}}/delete" method="POST">
+                <input type="submit" value="Delete Movie" class="button">
+              </form>
+            </td>
+            <td>
+              <a href="/movies/{{_id}}/edit"><button class="button">Edit Movie</button></a>
+            </td>
+          </tr>
+          {{/movies}}
+        </tbody>
+    </table>
+</body>
+</html>
