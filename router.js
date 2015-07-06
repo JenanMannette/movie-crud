@@ -6,7 +6,7 @@ var  qs = require('qs');
 var view = require('./view');
 var mime = require('mime');
 
-
+//All movies
 routes.addRoute('/movies', (req, res, url) => {
   res.setHeader('Content-Type', 'text/html')
   if (req.method === 'GET') {
@@ -31,12 +31,14 @@ routes.addRoute('/movies', (req, res, url) => {
   }
 });
 
+//New movie
 routes.addRoute('/movies/new', (req, res, url) => {
   res.setHeader('Content-Type', 'text/html')
     var template = view.render('movies/new', {})
     res.end(template)
 });
 
+//Show movie at specific ID
 routes.addRoute('/movies/:id', (req, res, url) => {
   if (req.method === 'GET') {
     movies.findOne({_id: url.params.id}, function (err, doc) {
@@ -47,6 +49,7 @@ routes.addRoute('/movies/:id', (req, res, url) => {
   }
 });
 
+//Edit movie at specifc ID
 routes.addRoute('/movies/:id/edit', (req, res, url) => {
   if (req.method === 'GET') {
     movies.findOne({_id: url.params.id}, function (err, doc) {
@@ -57,6 +60,7 @@ routes.addRoute('/movies/:id/edit', (req, res, url) => {
   }
 });
 
+//Update movie at specific ID
 routes.addRoute('/movies/:id/update', function (req, res, url) {
   if (req.method === 'POST') {
     var data = '' // query string coming in from the form
@@ -74,6 +78,7 @@ routes.addRoute('/movies/:id/update', function (req, res, url) {
   }
 });
 
+//Delete movie at specifc ID
 routes.addRoute('/movies/:id/delete', (req, res, url) => {
   if (req.method === 'POST') {
     movies.remove({_id: url.params.id}, function (err, doc) {
@@ -84,6 +89,7 @@ routes.addRoute('/movies/:id/delete', (req, res, url) => {
   }
 });
 
+//Public with CSS and Images
 routes.addRoute('/public/*', (req, res, url) => {
   res.setHeader('Content-Type', mime.lookup(req.url))
   fs.readFile('.' + req.url, function (err, file) {
@@ -92,6 +98,7 @@ routes.addRoute('/public/*', (req, res, url) => {
   })
 });
 
+//Landing page
 routes.addRoute('/', (req, res, url) => {
   res.setHeader('Content-Type', 'text/html')
   if (req.method === 'GET') {

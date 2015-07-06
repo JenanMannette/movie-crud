@@ -8,6 +8,11 @@ html {
   font-size: 12px;
 }
 
+body {
+  padding: 5px;
+  margin: 0px;
+}
+
 h1 {
   font-family: 'Iceland', cursive;
   font-size: 30px;
@@ -28,8 +33,16 @@ h3 {
 table{
   border-collapse: collapse;
 }
-.line td{
+
+.table-header {
+  background: #aaece2;
+  border: 1px solid black;
   padding: 10px;
+  color: black;
+}
+
+.line td{
+  padding: 20px;
   border-bottom: 2px solid black;
 }
 
@@ -50,4 +63,28 @@ a:hover {
 
 input:hover, button:hover {
   background: #638208;
+}
+
+.landing-movie {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.landing {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.new-movie {
+  float: right;
+  margin-top: 90px;
+  margin-right: 20px;
+}
+
+.poster {
+  width: auto;
 }

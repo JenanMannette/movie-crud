@@ -11,64 +11,64 @@
   <h1>Edit {{title}}</h1>
   <a href="/movies"><button class="button">All Movies</button></a>
   <p>
-       <img class="poster" src="{{poster}}" alt="movie poster" height="500">
-       <form action="/movies/{{_id}}/update" method="POST">
-         <table>
-           <tr>
-             <th>
-               <label for="title">Title</label>
-             </th>
-             <td>
-               <input type="text" name="title" id="title" size="40" value="{{title}}">
-             </td>
-           </tr>
-           <tr>
-             <th>
-               <label for="director">Director</label>
-             </th>
-             <td>
-               <input type="text" name="director" id="director" size="40" value="{{director}}">
-             </td>
-           </tr><tr>
-             <th>
-               <label for="year">Year</label>
-             </th>
-             <td>
-               <input type="text" name="year" id="year" size="5" value="{{year}}">
-             </td>
-           </tr><tr>
-             <th>
-               <label for="rating">
-                 My Rating
-               <td>
-                 </label>
-                 <label for="one">
-                   <input type="radio" id="one" name="rating" value="1"> 1
-                 </label>
-                 <label for="two">
-                   <input type="radio" id="two" name="rating" value="2"> 2
-                 </label>
-                 <label for="three">
-                   <input type="radio" id="three" name="rating" checked="checked" value="3"> 3
-                 </label>
-                 <label for="four">
-                   <input type="radio" id="four" name="rating" value="4"> 4
-                 </label>
-                 <label for="five">
-                   <input type="radio" id="five" name="rating" value="5"> 5
-                 </label>
-               </td>
-             </th>
-           </tr><tr>
-             <th>
-               <label for="poster">Poster URL</label>
-             </th>
-             <td>
-               <input type="text" name="poster" id="poster" size="50" value="{{poster}}">
-             </td>
-           </tr><tr>
-           </table>
-           <input type="submit" value="Update Movie" class="button">
+   <img class="poster" src="{{poster}}" alt="movie poster" height="500">
+   <form action="/movies/{{_id}}/update" method="POST">
+     <table>
+       <tr>
+         <th>
+           <label for="title">Title</label>
+         </th>
+         <td>
+           <input type="text" name="title" id="title" size="40" value="{{title}}">
+         </td>
+       </tr>
+       <tr>
+         <th>
+           <label for="director">Director</label>
+         </th>
+         <td>
+           <input type="text" name="director" id="director" size="40" value="{{director}}">
+         </td>
+       </tr><tr>
+         <th>
+           <label for="year">Year</label>
+         </th>
+         <td>
+           <input type="text" name="year" id="year" size="5" value="{{year}}">
+         </td>
+       </tr><tr>
+         <th>
+           <label for="rating">
+             My Rating
+           <td>
+             </label>
+             <label for="one">
+               <input type="radio" id="one" name="rating" value="{{rating}}"> 1
+             </label>
+             <label for="two">
+               <input type="radio" id="two" name="rating" value="{{rating}}"> 2
+             </label>
+             <label for="three">
+               <input type="radio" id="three" name="rating" value="{{rating}}"> 3
+             </label>
+             <label for="four">
+               <input type="radio" id="four" name="rating" value="{{rating}}"> 4
+             </label>
+             <label for="five">
+               <input type="radio" id="five" name="rating" value="{{rating}}"> 5
+             </label>
+           </td>
+         </th>
+       </tr><tr>
+         <th>
+           <label for="poster">Poster URL</label>
+         </th>
+         <td>
+           <input type="text" name="poster" id="poster" size="50" value="{{poster}}">
+         </td>
+       </tr><tr>
+       </table>
+       <input type="submit" value="Update Movie" class="button">
        </form>
 </body>
 </html>
